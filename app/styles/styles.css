@@ -61,8 +61,19 @@
 }
 
 .post-container h2 {
-  margin-bottom: 50px;
+  margin: 30px 10px;
+  font-size: 1.2em;
+  color: #868686;
   font-weight: 200;
+  font-style: italic;
+}
+
+.post-container p {
+  text-align: justify;
+  margin: auto;
+  width: 90%;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .write {
