@@ -2,6 +2,7 @@ import "../styles/styles.css";
 import Header from "app/components/header";
 import { supabase } from "../lib/supabase";
 import AddPost from "app/components/addpost";
+import Actionbutton from "app/components/actionbutton";
 
 export default function Write() {
   async function addPost(formData) {
@@ -19,9 +20,12 @@ export default function Write() {
   }
 
   return (
-    <div className="write">
-      <Header header="Write your post" />
-      <AddPost addPost={addPost} />
+    <div className="container">
+      <div className="content">
+        <Header destination="/" header="Write your post" button="return to home" />
+        <AddPost addPost={addPost} /> {/* form */}
+      </div>
+      <Actionbutton destination="/" button="Go home" />
     </div>
   );
 }

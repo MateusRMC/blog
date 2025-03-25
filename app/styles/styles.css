@@ -4,39 +4,129 @@
   font-family: GeistSans;
 }
 
+body {
+  background-color: #202020;
+}
+
+/* pages container */
+
 .container {
+  color: #f8f8f8;
   display: flex;
   width: 100vw;
   height: 100vh;
   text-align: center;
 }
 
-.header {
-  padding: 50px;
-}
+/* left sidebar */
 
-.created_at {
-  color: #b2b2b2;
-  margin-bottom: 20px;
+.left-fix {
+  position: fixed;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .left-list {
-  display: flex;
+  background-color: #181818;
   flex-direction: column;
-  gap: 20px;
-  text-transform: capitalize;
+  text-transform: initial;
   height: 100vh;
-  width: 400px;
-  background-color: #d7d7d7;
+  width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.innerdiv {
-  background-color: #d7d7d7;
+.sidebarButtonClosed {
+  margin: 50px 30px;
+  padding: 20px;
+  background-color: #202020;
+  color: #f8f8f8;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.sidebarButtonOpen {
+  max-height: 67px;
+  margin: 50px 10px;
+  padding: 20px;
+  background-color: #202020;
+  color: #f8f8f8;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+}
+
+.sidebarButtonClosed:hover {
+  cursor: pointer;
+  background-color: #282828;
+}
+
+.sidebarButtonOpen:hover {
+  cursor: pointer;
+  background-color: #282828;
+}
+
+.left-list h1 {
+  margin: 50px 10px;
 }
 
 .left-list a {
   text-decoration: none;
+  color: #f8f8f8;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
 }
+
+.innerdiv {
+  text-align: left;
+  padding: 15px;
+  margin: 10px 20px;
+  border-radius: 15px;
+}
+
+.innerdiv::first-letter {
+  text-transform: uppercase;
+}
+
+.innerdiv:hover {
+  background-color: #222222;
+}
+
+/* header */
+
+.header {
+  padding: 50px;
+  font-size: 1.2em;
+  letter-spacing: -3%;
+}
+
+/* top-right action button */
+
+.ActionButton {
+  position: fixed;
+  top: 50px;
+  right: 30px;
+  text-decoration: none;
+  border: 2px solid #505050;
+  color: #f8f8f8;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 20px 40px;
+  transition: 0.2s ease-in-out;
+}
+
+.ActionButton:hover {
+  border-color: #ff9000;
+  /* quero adicionar a animação aqui*/
+}
+
+/* content, posts */
 
 .content {
   display: flex;
@@ -45,42 +135,32 @@
   width: 100%;
 }
 
-.menu {
-  text-align: center;
-  justify-content: center;
-  width: 100vw;
-  height: 5em;
-}
-
-.writepost-link {
-  text-decoration: none;
-  padding: 1em 4em;
-  background-color: #202020;
-  font-size: 1.2em;
-  margin: 10px;
-  text-align: center;
-  font-weight: bold;
-  color: #f8f8f8;
-  border-radius: 40px;
-  box-shadow: 0 0 5px #808080;
-}
-
 .post-container {
-  background-color: #f8f8f8;
+  background-color: #252525;
   width: 800px;
   margin: 0 auto;
   padding: 50px;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
-.post-container h1 {
+.created_at {
+  color: #ff9000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-titulo {
   text-transform: initial;
   font-weight: 800;
   letter-spacing: -3%;
   font-size: 3em;
 }
 
-.post-container h2 {
+.post-titulo::first-letter {
+  text-transform: uppercase;
+}
+
+.post-subtitulo {
   margin: 30px 10px;
   font-size: 1.2em;
   color: #868686;
@@ -88,17 +168,23 @@
   font-style: italic;
 }
 
-.post-container p {
+.post-subtitulo::first-letter {
+  text-transform: uppercase;
+}
+
+.post-corpo {
   text-align: justify;
   margin: auto;
-  width: 90%;
+  width: 85%;
   font-size: 18px;
   line-height: 1.8;
 }
 
-.write {
-  text-align: center;
+.corpo::first-letter {
+  text-transform: uppercase;
 }
+
+/* Write page */
 
 .form {
   margin: auto;
@@ -107,8 +193,9 @@
   width: 800px;
 }
 
-.form input,
-textarea {
+.form-titulo,
+.form-subtitulo,
+.form-corpo {
   line-height: 40px;
   border-radius: 10px;
   padding: 10px 20px;
@@ -117,7 +204,7 @@ textarea {
   border: 1px solid #d7d7d7;
 }
 
-.corpo {
+.form-corpo {
   height: 200px;
 }
 
