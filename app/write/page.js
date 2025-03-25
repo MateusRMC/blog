@@ -20,7 +20,7 @@ export default function Write() {
 
   return (
     <div className="write">
-      <Header header="Escreva seu post!" />
+      <Header header="Write your post" />
       <AddPost addPost={addPost} />
     </div>
   );

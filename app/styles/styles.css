@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: GeistSans;
 }
 
 .container {
@@ -45,6 +45,26 @@
   width: 100%;
 }
 
+.menu {
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
+  height: 5em;
+}
+
+.writepost-link {
+  text-decoration: none;
+  padding: 1em 4em;
+  background-color: #202020;
+  font-size: 1.2em;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #f8f8f8;
+  border-radius: 40px;
+  box-shadow: 0 0 5px #808080;
+}
+
 .post-container {
   background-color: #f8f8f8;
   width: 800px;
@@ -54,9 +74,9 @@
 }
 
 .post-container h1 {
-  text-transform: capitalize;
+  text-transform: initial;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -3%;
   font-size: 3em;
 }
 
@@ -95,6 +115,10 @@ textarea {
   margin: 30px 10px;
   font-size: 18px;
   border: 1px solid #d7d7d7;
+}
+
+.corpo {
+  height: 200px;
 }
 
 .form button {

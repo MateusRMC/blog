@@ -4,9 +4,7 @@ import Header from "./components/header";
 import "./styles/styles.css";
 
 export default async function Home() {
-  const res = await fetch("https://blog-heymateus.vercel.app/api/readposts", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://blog-heymateus.vercel.app/api/readposts", { cache: "no-store" });
   const data = await res.json();
 
   return (
@@ -15,7 +13,7 @@ export default async function Home() {
         <ListaDePosts data={data} />
       </div>
       <div className="content">
-        <Header header="Homepage" />
+        <Header header="Matbooks - My notes on life " />
         <PostDisplay data={data} />
       </div>
     </div>
