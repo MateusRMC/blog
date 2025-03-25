@@ -1,13 +1,13 @@
-import { supabase } from "./lib/supabase";
 import ListaDePosts from "./components/listadeposts";
 import PostDisplay from "./components/postdisplay";
 import Header from "./components/header";
 import "./styles/styles.css";
 
-export const dynamic = "force-dynamic";
-
 export default async function Home() {
-  const { data, error } = await supabase.from("posts").select("*");
+  const res = await fetch("https://blog-heymateus.vercel.app/api/getposts", {
+    cache: "no-store",
+  });
+  const data = await res.json();
 
   return (
     <div className="container">
