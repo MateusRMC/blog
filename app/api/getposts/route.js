@@ -1,7 +1,5 @@
 import { supabase } from "../../lib/supabase";
 
-export const dynamic = "force-dynamic"; // Evita cache
-
 export async function GET() {
   const { data, error } = await supabase.from("posts").select("*");
 
