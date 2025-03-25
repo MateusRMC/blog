@@ -4,6 +4,8 @@ import PostDisplay from "./components/postdisplay";
 import Header from "./components/header";
 import "./styles/styles.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const { data, error } = await supabase.from("posts").select("*");
 
