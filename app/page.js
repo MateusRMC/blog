@@ -4,9 +4,7 @@ import Header from "./components/header";
 import "./styles/styles.css";
 
 export default async function Home() {
-  const res = await fetch("https://blog-heymateus.vercel.app/api/getposts", {
-    cache: "no-store",
-  });
+  const res = await fetch("https://blog-heymateus.vercel.app/api/getposts");
   const data = await res.json();
 
   return (
