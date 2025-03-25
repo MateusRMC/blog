@@ -1,5 +1,4 @@
 import { formatDistanceToNow } from 'date-fns';
-import { ptBR } from 'date-fns/locale'; // Se quiser português
 
 
 export default function PostDisplay({ data }) {

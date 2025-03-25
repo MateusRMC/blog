@@ -100,7 +100,7 @@ body {
 /* header */
 
 .header {
-  padding: 50px;
+  margin: 50px 0px;
   font-size: 1.2em;
   letter-spacing: -3%;
 }
@@ -187,32 +187,68 @@ body {
 /* Write page */
 
 .form {
-  margin: auto;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
   width: 800px;
 }
 
+.title-subtitle {
+  display: flex;
+  width: 100%;
+}
+
 .form-titulo,
-.form-subtitulo,
-.form-corpo {
+.form-subtitulo {
+  width: 100%;
+  background-color: #202020;
+  color: #f8f8f8;
   line-height: 40px;
-  border-radius: 10px;
   padding: 10px 20px;
-  margin: 30px 10px;
+  margin: 20px 10px;
   font-size: 18px;
-  border: 1px solid #d7d7d7;
+  border: none;
+  border-bottom: 2px solid #505050;
 }
 
 .form-corpo {
-  height: 200px;
+  height: 300px;
+  background-color: #202020;
+  color: #f8f8f8;
+  line-height: 40px;
+  padding: 10px 20px;
+  margin: 15px 10px;
+  font-size: 18px;
+  border: 1px solid #505050;
+  border-radius: 20px;
 }
 
-.form button {
+.form-submit {
+  width: 60%;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 20px;
-  color: white;
+  background-color: #f8f8f8;
+  font-weight: 500;
   font-size: 1.5em;
+  letter-spacing: -3%;
   border: none;
-  background-color: #065d90;
+  cursor: pointer;
+}
+
+.form-titulo:focus {
+  outline: none;
+}
+
+.form-subtitulo:focus {
+  outline: none;
+}
+
+.form-corpo:focus {
+  outline: none;
+}
+
+.form-submit:hover {
+  background-color: #181818;
+  color: #f8f8f8;
 }
