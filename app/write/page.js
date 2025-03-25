@@ -5,15 +5,13 @@ import AddPost from "app/components/addpost";
 
 export default function Write() {
   async function addPost(formData) {
-    "use server"; // Indica que esta função roda no servidor
+    "use server";
 
     const titulo = formData.get("titulo");
     const subtitulo = formData.get("subtitulo");
     const corpo = formData.get("corpo");
 
-    const { data, error } = await supabase
-      .from("posts")
-      .insert([{ titulo, subtitulo, corpo }]);
+    const { data, error } = await supabase.from("posts").insert([{ titulo, subtitulo, corpo }]);
 
     if (error) {
       throw new Error(error.message);
