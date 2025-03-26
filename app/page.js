@@ -3,8 +3,7 @@ import PostDisplay from "./components/postdisplay";
 import Header from "./components/header";
 import Actionbutton from "./components/actionbutton";
 import Noposts from "./components/noposts";
-import { redirect } from "next/navigation";
-import Link from "next/link";
+
 import "./styles/styles.css";
 
 export default async function Home() {
