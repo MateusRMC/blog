@@ -1,5 +1,7 @@
-import { formatDistanceToNow } from 'date-fns';
+"use client";
 
+import { formatDistanceToNow } from 'date-fns';
+import ReactMarkdown from 'react-markdown';
 
 export default function PostDisplay({ data }) {
   return (
@@ -11,7 +13,7 @@ export default function PostDisplay({ data }) {
           <p className="created_at">{formatDistanceToNow(new Date(post.created_at), { addSuffix: true})}</p>
           <h1 className="post-titulo">{post.titulo}</h1>
           <h2 className="post-subtitulo">{post.subtitulo}</h2>
-          <p className="post-corpo">{post.corpo}</p>
+          <ReactMarkdown>{post.corpo}</ReactMarkdown>
         </div>
       ))
   );
