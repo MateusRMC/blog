@@ -2,6 +2,7 @@ import ListaDePosts from "./components/listadeposts";
 import PostDisplay from "./components/postdisplay";
 import Header from "./components/header";
 import Actionbutton from "./components/actionbutton";
+import Noposts from "./components/noposts";
 import Link from "next/link";
 import "./styles/styles.css";
 
@@ -13,12 +14,12 @@ export default async function Home() {
 
   return (
     <div className="container">
-      <ListaDePosts title="My previous posts" data={data} />
+      {data.length > 0 && <ListaDePosts title="My previous posts" data={data} />}
       <div className="content">
-        <Header header="Matbooks - My notes on life." />
-        <PostDisplay data={data} />
+        <Header header="Matbooks, My life journal." />
+        {data.length == 0 ? <Noposts /> : <PostDisplay data={data} />}
       </div>
-      <Actionbutton destination="/write" button="Add new post" />
+      {data.length > 0 && <Actionbutton className="cornerActionButton" destination="/write" button="Add new post" />}
     </div>
   );
 }

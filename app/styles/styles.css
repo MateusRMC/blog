@@ -100,14 +100,14 @@ body {
 /* header */
 
 .header {
-  margin: 50px 0px;
+  margin: 60px 0px;
   font-size: 1.2em;
   letter-spacing: -3%;
 }
 
 /* top-right action button */
 
-.ActionButton {
+.cornerActionButton {
   position: fixed;
   top: 50px;
   right: 30px;
@@ -121,12 +121,35 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.ActionButton:hover {
+.cornerActionButton:hover {
   border-color: #ff9000;
-  /* quero adicionar a animação aqui*/
 }
 
 /* content, posts */
+
+.no-posts {
+  color: #505050;
+  margin-top: 10%;
+  font-weight: 300;
+  font-size: 2.5;
+}
+
+.newFirstPost {
+  width: 200px;
+  margin: 0 auto;
+  text-decoration: none;
+  border: 2px solid #505050;
+  color: #f8f8f8;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 20px 40px;
+  transition: 0.2s ease-in-out;
+}
+
+.newFirstPost:hover {
+  border-color: #ff9000;
+}
 
 .content {
   display: flex;
@@ -136,11 +159,11 @@ body {
 }
 
 .post-container {
-  background-color: #252525;
+  background-color: #232323;
   width: 800px;
   margin: 0 auto;
-  padding: 50px;
-  border-radius: 15px;
+  padding: 5em 3em;
+  border-radius: 10px;
 }
 
 .created_at {
@@ -151,7 +174,7 @@ body {
 
 .post-titulo {
   text-transform: initial;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -3%;
   font-size: 3em;
 }
@@ -161,11 +184,10 @@ body {
 }
 
 .post-subtitulo {
-  margin: 30px 10px;
+  margin: 20px 10px;
   font-size: 1.2em;
   color: #868686;
   font-weight: 200;
-  font-style: italic;
 }
 
 .post-subtitulo::first-letter {
@@ -174,13 +196,13 @@ body {
 
 .post-corpo {
   text-align: justify;
-  margin: auto;
+  margin: 100px auto;
   width: 85%;
-  font-size: 18px;
+  font-size: 1.2em;
   line-height: 1.8;
 }
 
-.corpo::first-letter {
+.post-corpo::first-letter {
   text-transform: uppercase;
 }
 

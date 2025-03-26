@@ -25,7 +25,7 @@ export default function Write() {
         <Header destination="/" header="Write your post" button="return to home" />
         <AddPost addPost={addPost} /> {/* form */}
       </div>
-      <Actionbutton destination="/" button="Go home" />
+      <Actionbutton className="cornerActionButton" destination="/" button="Go home" />
     </div>
   );
 }
