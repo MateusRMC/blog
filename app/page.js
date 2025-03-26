@@ -3,6 +3,7 @@ import PostDisplay from "./components/postdisplay";
 import Header from "./components/header";
 import Actionbutton from "./components/actionbutton";
 import Noposts from "./components/noposts";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import "./styles/styles.css";
 
@@ -16,7 +17,7 @@ export default async function Home() {
     <div className="container">
       {data.length > 0 && <ListaDePosts title="My previous posts" data={data} />}
       <div className="content">
-        <Header header="Matbooks, My life journal." />
+        <Header header="Matbooks — My life journal." />
         {data.length == 0 ? <Noposts /> : <PostDisplay data={data} />}
       </div>
       {data.length > 0 && <Actionbutton className="cornerActionButton" destination="/write" button="Add new post" />}

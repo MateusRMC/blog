@@ -3,6 +3,7 @@ import Header from "app/components/header";
 import { supabase } from "../lib/supabase";
 import AddPost from "app/components/addpost";
 import Actionbutton from "app/components/actionbutton";
+import { redirect } from "next/navigation";
 
 export default function Write() {
   async function addPost(formData) {
@@ -17,6 +18,8 @@ export default function Write() {
     if (error) {
       throw new Error(error.message);
     }
+
+    redirect("/");
   }
 
   return (

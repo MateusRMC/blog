@@ -131,24 +131,25 @@ body {
   color: #505050;
   margin-top: 10%;
   font-weight: 300;
+  font-weight: 500;
   font-size: 2.5;
 }
 
-.newFirstPost {
+.firstPostButton {
   width: 200px;
   margin: 0 auto;
   text-decoration: none;
-  border: 2px solid #505050;
-  color: #f8f8f8;
-  font-size: 1em;
-  font-weight: bold;
+  background-color: #fff;
+  color: #181818;
+  font-size: 1.2em;
+  font-weight: 500;
   border-radius: 20px;
   padding: 20px 40px;
   transition: 0.2s ease-in-out;
 }
 
-.newFirstPost:hover {
-  border-color: #ff9000;
+.firstPostButton:hover {
+  background-color: #bebebe;
 }
 
 .content {
@@ -207,6 +208,15 @@ body {
 }
 
 /* Write page */
+
+.success {
+  background-color: rgb(91, 184, 91);
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  font-size: 1em;
+  color: #fff;
+}
 
 .form {
   margin: 10px auto;
