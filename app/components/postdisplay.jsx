@@ -13,7 +13,9 @@ export default function PostDisplay({ data }) {
           <p className="created_at">{formatDistanceToNow(new Date(post.created_at), { addSuffix: true})}</p>
           <h1 className="post-titulo">{post.titulo}</h1>
           <h2 className="post-subtitulo">{post.subtitulo}</h2>
-          <ReactMarkdown>{post.corpo}</ReactMarkdown>
+          <div className="post-corpo-container">
+            <ReactMarkdown>{post.corpo}</ReactMarkdown> {/* basically a bunch of <p>'s divided by breaklines */}
+          </div>
         </div>
       ))
   );

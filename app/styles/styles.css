@@ -36,6 +36,46 @@ body {
   overflow-y: scroll;
 }
 
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.menu-popup {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+  z-index: 1000;
+  padding: 6px 0;
+}
+
+.menu-item {
+  padding: 10px 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #333;
+}
+
+.menu-item.delete {
+  color: red;
+}
+
 .sidebarButtonClosed {
   margin: 50px 30px;
   padding: 20px;
@@ -195,7 +235,7 @@ body {
   text-transform: uppercase;
 }
 
-.post-corpo {
+.post-corpo-container {
   text-align: justify;
   margin: 100px auto;
   width: 85%;
@@ -204,7 +244,7 @@ body {
   white-space: pre-wrap;
 }
 
-.post-corpo::first-letter {
+.post-corpo-continer p::first-letter {
   text-transform: uppercase;
 }
 
