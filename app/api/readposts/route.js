@@ -1,7 +1,7 @@
 import { supabase } from "../../lib/supabase";
 
 export async function GET() {
-  const { data, error } = await supabase.schema("matlab_blog").from("posts").select("*");
+  const { data, error } = await supabase.from("posts").select("*");
 
   if (error) {
     return new Response(JSON.stringify({ error: error.message }), {
@@ -10,7 +10,7 @@ export async function GET() {
     });
   }
 
-  return new Response(JSON.stringify(data), {
+  return new Response(JSON.stringify({ data }), {
     status: 200,
     headers: { "Content-Type": "application/json" },
   });

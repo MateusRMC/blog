@@ -13,7 +13,11 @@ export default function Write() {
     const subtitulo = formData.get("subtitulo");
     const corpo = formData.get("corpo");
 
-    const { data, error } = await supabase.schema("matlab_blog").from("posts").insert([{ titulo, subtitulo, corpo }]);
+    if (!titulo || !corpo) {
+      throw new Error("Título e corpo são obrigatórios.");
+    }
+
+    const { data, error } = await supabase.from("posts").insert([{ titulo, subtitulo, corpo }]);
 
     if (error) {
       throw new Error(error.message);
@@ -26,7 +30,7 @@ export default function Write() {
     <div className="container">
       <div className="content">
         <Header destination="/" header="Write your post" button="return to home" />
-        <AddPost addPost={addPost} /> {/* form */}
+        <AddPost addPost={addPost} />
       </div>
       <Actionbutton className="cornerActionButton" destination="/" button="Go home" />
     </div>
