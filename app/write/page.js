@@ -13,7 +13,7 @@ export default function Write() {
     const subtitulo = formData.get("subtitulo");
     const corpo = formData.get("corpo");
 
-    const { data, error } = await supabase.from("posts").insert([{ titulo, subtitulo, corpo }]);
+    const { data, error } = await supabase.schema("matlab_blog").from("posts").insert([{ titulo, subtitulo, corpo }]);
 
     if (error) {
       throw new Error(error.message);
